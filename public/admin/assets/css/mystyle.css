@@ -1,0 +1,20 @@
+.pesan {
+    font-size: 12px;
+    
+}
+
+.danger {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.set-hide {
+    display: none;
+}
+
+.set-bg {
+    background-color: aqua;
+}
