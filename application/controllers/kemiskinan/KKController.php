@@ -26,7 +26,6 @@ class KKController extends CI_Controller {
         }
         $kirim = $result;
 		echo json_encode($kirim);
-
 	}
 	
 	public function filter($action = '', $id = null){

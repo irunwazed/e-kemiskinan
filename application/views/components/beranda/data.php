@@ -1,13 +1,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Simple Tables2
-        <small>preview of simple tables</small>
+        Beranda
+        <!-- <small>preview of simple tables</small> -->
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?=base_url()?>"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Tables</a></li>
-        <li class="active">Simple</li>
+        <li><a href="<?=base_url()?>"><i class="fa fa-dashboard"></i> Beranda</a></li>
       </ol>
     </section>
 

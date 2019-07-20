@@ -7,7 +7,7 @@
       <ol class="breadcrumb">
         <li><a href="<?=base_url()?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="<?=base_url()?>entry">Enty</a></li>
-        <li class="active">Simple</li>
+        <li class="active">Keluarga</li>
       </ol>
     </section>
 
