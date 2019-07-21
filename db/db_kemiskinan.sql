@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2019 at 07:01 PM
+-- Generation Time: Jul 21, 2019 at 08:29 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 5.6.37
 
@@ -136,7 +136,8 @@ CREATE TABLE `keluarga` (
 --
 
 INSERT INTO `keluarga` (`no_kk`, `nik_kepala`) VALUES
-('123', '001');
+('123', '0003'),
+('1233', '123123');
 
 -- --------------------------------------------------------
 
@@ -158,7 +159,9 @@ CREATE TABLE `keluarga_anggota` (
 --
 
 INSERT INTO `keluarga_anggota` (`no_kk`, `nik`, `jabatan`, `aktif`, `tgl_input`, `tgl_update`) VALUES
-('123', '001', 1, 1, NULL, NULL);
+('1233', '0002', 1, 1, NULL, NULL),
+('123', '0003', 1, 1, NULL, NULL),
+('1233', '123123', 2, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -184,6 +187,15 @@ CREATE TABLE `keluarga_indikator` (
   `id_kesejahteraan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `keluarga_indikator`
+--
+
+INSERT INTO `keluarga_indikator` (`no_kk`, `tahun`, `pendapatan_utama`, `pendapatan_sampingan`, `pengeluaran_total`, `jenis_aset`, `rumah_ukuran`, `id_rumah_kepemilikan`, `id_dinding`, `id_atap`, `id_lantai`, `id_penerangan`, `id_jamban`, `id_sumber_air_minum`, `id_kesejahteraan`) VALUES
+('123', 2019, 15000000, 5000000, 20000000, 'sdf', 234, 2, 4, 4, 3, 3, 3, 4, 2),
+('1233', 2018, 15000000, 5000000, 20000000, 'sdf', 23323, 1, 3, 3, 3, 2, 2, 2, 2),
+('1233', 2019, 15000000, 5000000, 20000000, 'sdf', 23323, 1, 3, 3, 3, 2, 2, 2, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -204,8 +216,9 @@ CREATE TABLE `keluarga_program` (
 --
 
 INSERT INTO `keluarga_program` (`id_keluarga_program`, `no_kk`, `kegiatan_nama`, `kegiatan_tahun`, `kegiatan_sumber_dana`, `program_jenis`) VALUES
-(1, '123', '222221122111', 2019, 2, 1),
-(2, '123', '222221122', 2019, 2, 2);
+(1, '1233', '22222', 2019, 2, 1),
+(2, '1233', '2222244', 2019, 2, 1),
+(3, '1233', '1111', 2019, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -343,7 +356,9 @@ CREATE TABLE `penduduk` (
 
 INSERT INTO `penduduk` (`nik`, `penduduk_nama`, `jenis_kelamin`, `tempat_lahir`, `tgl_lahir`, `alamat`, `kondisi_fisik`, `jenis_keterampilan`, `hidup`, `id_status_pendidikan`, `id_status_perkawinan`, `id_pekerjaan`, `id_agama`, `tgl_input`, `tgl_update`) VALUES
 ('0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-('001', 'Sumardin', 1, 'Kendari', '2019-07-24 00:00:00', 'sdf', 'sdf', 'sdf', 1, 5, 3, 2, 1, '2019-07-20 15:54:33', NULL);
+('0002', 'samsu', 1, 'Kendari', '2005-07-14 00:00:00', 'sdf', 'sdf', 'sdf', 1, 4, 2, 2, 1, '2019-07-20 22:02:16', NULL),
+('0003', 'Sumardin2', 1, 'Sidoarjo', '2019-07-23 00:00:00', 'sadf', 'sdf', 'sdf', 1, 4, 3, 2, 1, '2019-07-21 06:02:57', NULL),
+('123123', 'Sumardin', 1, 'Kendari', '1997-07-24 00:00:00', 'sdf', 'sfd', 'sdf', 1, 3, 4, 2, 2, '2019-07-20 18:27:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -693,7 +708,7 @@ ALTER TABLE `jamban`
 -- AUTO_INCREMENT for table `keluarga_program`
 --
 ALTER TABLE `keluarga_program`
-  MODIFY `id_keluarga_program` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_keluarga_program` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `keluarga_program_akan_terima`
