@@ -49,78 +49,12 @@
                         <option value="2">Perempuan</option>
                       </select>
                     </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <h4>INDIKATOR INFRA STRUKTUR</h4>
                     <div class="form-group">
-                      <label>Kepemilikan Rumah</label>
-                      <select name="id_rumah_kepemilikan" class="form-control select" required autofocus>
-                        <option value="">Pilih Kepemilikan Rumah</option>
-                        <?php foreach($dataRumahKepemilikan as $row){ ?>
-                        <option value="<?=$row['id_rumah_kepemilikan']?>"><?=$row['rumah_kepemilikan_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-
-                    <div class="form-group">
-                      <label>Dinding Terluas</label>
-                      <select name="id_dinding" class="form-control select" required autofocus>
-                        <option value="">Pilih Dinding Terluas</option>
-                        <?php foreach($dataDinding as $row){ ?>
-                        <option value="<?=$row['id_dinding']?>"><?=$row['dinding_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Atap Terluas</label>
-                      <select name="id_atap" class="form-control select" required autofocus>
-                        <option value="">Pilih Atap Terluas</option>
-                        <?php foreach($dataAtap as $row){ ?>
-                        <option value="<?=$row['id_atap']?>"><?=$row['atap_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Lantai Terluas</label>
-                      <select name="id_lantai" class="form-control select" required autofocus>
-                        <option value="">Pilih Lantai Terluas</option>
-                        <?php foreach($dataLantai as $row){ ?>
-                        <option value="<?=$row['id_lantai']?>"><?=$row['lantai_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Penerangan</label>
-                      <select name="id_penerangan" class="form-control select" required autofocus>
-                        <option value="">Pilih Penerangan</option>
-                        <?php foreach($dataPenerangan as $row){ ?>
-                        <option value="<?=$row['id_penerangan']?>"><?=$row['penerangan_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <h4>INDIKATOR BUDAYA</h4>
-                    
-                    <div class="form-group">
-                      <label>Jamban</label>
-                      <select name="id_jamban" class="form-control select" required autofocus>
-                        <option value="">Pilih Jamban</option>
-                        <?php foreach($dataJamban as $row){ ?>
-                        <option value="<?=$row['id_jamban']?>"><?=$row['jamban_nama']?></option>
-                        <?php } ?>
-                      </select>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Sumber Air Minum</label>
-                      <select name="id_sumber_air_minum" class="form-control select" required autofocus>
-                        <option value="">Pilih Sumber Air Minum</option>
-                        <?php foreach($dataSumberAirMinum as $row){ ?>
-                        <option value="<?=$row['id_sumber_air_minum']?>"><?=$row['sumber_air_minum_nama']?></option>
+                      <label>Kesejahteraan</label>
+                      <select name="id_kesejahteraan" class="form-control select" required autofocus>
+                        <option value="">Pilih Kesejahteraan</option>
+                        <?php foreach($dataKesejahteraan as $row){ ?>
+                        <option value="<?=$row['id_kesejahteraan']?>"><?=$row['kesejahteraan_nama']?></option>
                         <?php } ?>
                       </select>
                     </div>

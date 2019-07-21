@@ -1,3 +1,7 @@
+
+
+
+
 <script>
 
     // console.log("sfd");
@@ -300,3 +304,8 @@
     });
 
 </script>
+<?php if(@$_GET['no_kk']){ ?>
+<script>
+cariKK();
+</script>
+<?php } ?>

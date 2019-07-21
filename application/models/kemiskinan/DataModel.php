@@ -86,6 +86,7 @@ class DataModel extends CI_Model
         $this->db->join('penduduk', 'penduduk.nik = keluarga_anggota.nik', 'left');
         $this->db->join('status_pendidikan', 'status_pendidikan.id_status_pendidikan = penduduk.id_status_pendidikan', 'left');
         $this->db->join('status_perkawinan', 'status_perkawinan.id_status_perkawinan = penduduk.id_status_perkawinan', 'left');
+        $this->db->order_by('penduduk.tgl_input', 'asc'); 
         $data = $this->db->get("keluarga_anggota")->result_array();
         return $data;
     }

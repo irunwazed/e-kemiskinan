@@ -30,7 +30,7 @@
                   <span id="pesan-no-kk" class="pesan danger"></span>
                   </div>
                   <div class="form-group col-sm-4"> 
-                    <input name="no_kk" type="number" class="form-control" placeholder="Nomor KK" required autofocus>
+                    <input name="no_kk" type="number" class="form-control" placeholder="Nomor KK" value="<?=@$_GET['no_kk']?>" required autofocus>
                   </div>
                   <div class="form-group col-sm-1">
                     <span class="btn btn-info" onclick="cariKK()">cari</span>

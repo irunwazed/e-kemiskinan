@@ -109,7 +109,7 @@ class LaporanController extends CI_Controller {
     }
     
     public function kesejahteraan(){
-        $foot['script'] = $this->load->view('components/laporan/program/script', null, true);
+        $foot['script'] = $this->load->view('components/laporan/kesejahteraan/script', null, true);
         
         $data['dataRumahKepemilikan'] = $this->DataModel->selectRumahKepemilikan();
         $data['dataSumberAirMinum'] = $this->DataModel->selectSumberAirMinum();
@@ -126,7 +126,7 @@ class LaporanController extends CI_Controller {
         $data['dataDana'] = $this->DataModel->selectDana();
 
         $this->load->view('include/head');
-        $this->load->view('components/laporan/program/data', $data);
+        $this->load->view('components/laporan/kesejahteraan/data', $data);
         $this->load->view('include/foot', $foot);
     }
 
@@ -135,7 +135,7 @@ class LaporanController extends CI_Controller {
         $pesan = "Data Tidak Ditemukan";
         $post = $this->input->post();
         $dataIndikator = array();
-        $linkSavePDF = 'pdf/program';
+        $linkSavePDF = 'pdf/kesejahteraan';
         $nameFile = 'indikator';
         $pageStatus = 'miring';
         

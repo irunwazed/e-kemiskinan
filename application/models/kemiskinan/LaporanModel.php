@@ -84,9 +84,19 @@ class LaporanModel extends CI_Model
         if(@$post['tahun'] > 0){
             $this->db->where("keluarga_indikator.tahun", $post['tahun']);
         }
+        // $this->db->where("umur", 11);
         
         $query = $this->db->get($this->table)->result_array();
-        return $query;
+        $data = array();
+        $index = 0;
+        for($i = 0; $i < count($query); $i++){
+            if($query[$i]['umur'] >= -11){
+                $data[$index] = $query[$i];
+                $index++;
+            }
+        }
+
+        return $data;
     }
 
     public function selectProgram($post){
@@ -115,7 +125,16 @@ class LaporanModel extends CI_Model
         }
 
         $query = $this->db->get($this->table)->result_array();
-        return $query;
+        $data = array();
+        $index = 0;
+        for($i = 0; $i < count($query); $i++){
+            if($query[$i]['umur'] >= -10){
+                $data[$index] = $query[$i];
+                $index++;
+            }
+        }
+
+        return $data;
     }
 
     public function selectKesejahteraan($post){
@@ -124,10 +143,30 @@ class LaporanModel extends CI_Model
         $this->db->join('penduduk', 'penduduk.nik = keluarga.nik_kepala', 'left');
         $this->db->join('keluarga_indikator', 'keluarga_indikator.no_kk = keluarga.no_kk');
 
+        $this->db->join('kesejahteraan', 'kesejahteraan.id_kesejahteraan = keluarga_indikator.id_kesejahteraan', 'left');
         
+        if(@$post['tahun'] > 0){
+            $this->db->where("keluarga_indikator.tahun", $post['tahun']);
+        }
+        if(@$post['id_kesejahteraan'] > 0){
+            $this->db->where("keluarga_indikator.id_kesejahteraan", $post['id_kesejahteraan']);
+        }
+        if(@$post['jenis_kelamin'] > 0){
+            $this->db->where("penduduk.jenis_kelamin", $post['jenis_kelamin']);
+        }
+        // // echo $post['jenis_kelamin'];
 
         $query = $this->db->get($this->table)->result_array();
-        return $query;
+        $data = array();
+        $index = 0;
+        for($i = 0; $i < count($query); $i++){
+            if($query[$i]['umur'] >= -10){
+                $data[$index] = $query[$i];
+                $index++;
+            }
+        }
+
+        return $data;
     }
     
 

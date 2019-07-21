@@ -76,6 +76,12 @@ $route['data/pengaturan/pengguna/create'] = 'kemiskinan/UserController/action/cr
 $route['data/pengaturan/pengguna/update'] = 'kemiskinan/UserController/action/update';
 $route['data/pengaturan/pengguna/delete'] = 'kemiskinan/UserController/action/delete';
 
+$route['pengaturan/keluarga'] = 'kemiskinan/KeluargaController/view';
+$route['data/pengaturan/keluarga/page-(:num)'] = 'kemiskinan/KeluargaController/getData/$1';
+$route['data/pengaturan/keluarga/create'] = 'kemiskinan/KeluargaController/action/create';
+$route['data/pengaturan/keluarga/update'] = 'kemiskinan/KeluargaController/action/update';
+$route['data/pengaturan/keluarga/delete'] = 'kemiskinan/KeluargaController/action/delete';
+
 $route['laporan/indikator'] = 'kemiskinan/LaporanController/indikator';
 $route['laporan/indikator/data'] = 'kemiskinan/LaporanController/selectIndikator';
 $route['laporan/indikator/save/(:any)'] = 'kemiskinan/LaporanController/selectIndikator/$1';

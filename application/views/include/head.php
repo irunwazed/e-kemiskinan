@@ -1,6 +1,9 @@
 <?php
 
-// redirect(base_url()."login");
+if(!@$_SESSION['id']){
+  redirect(base_url()."logout");
+}
+// 
 
 ?>
 <!DOCTYPE html>
